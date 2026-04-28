@@ -1,0 +1,69 @@
+{
+  "login": {
+    "title": "Iniciar Sesión",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "button": "Iniciar Sesión",
+    "logging_in": "Iniciando sesión...",
+    "welcome_back": "¡Bienvenido de nuevo!",
+    "welcome_back_message": "¿Ya tienes una cuenta?",
+    "login_button": "Iniciar Sesión"
+  },
+  "register": {
+    "title": "Registrarse",
+    "username": "Usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "Registrarse",
+    "creating": "Creando cuenta...",
+    "hello_welcome": "¡Hola, bienvenido!",
+    "hello_welcome_message": "¿No tienes una cuenta?",
+    "register_button": "Registrarse"
+  },
+  "recovery": {
+    "title": "Recuperar Contraseña",
+    "username": "Usuario",
+    "email": "Correo electrónico",
+    "new_password": "Nueva Contraseña",
+    "confirm_password": "Confirmar Contraseña",
+    "button": "Cambiar Contraseña",
+    "changing": "Cambiando contraseña...",
+    "back_to_login": "Volver al inicio de sesión",
+    "need_help": "¿Necesitas ayuda?",
+    "need_help_message": "Restablece tu contraseña en segundos",
+    "back_button": "Volver",
+    "password_reset": "Restablecer Contraseña",
+    "password_reset_message": "Ingresa tus nuevas credenciales"
+  },
+  "password_strength": {
+    "weak": "⚠️ Contraseña débil",
+    "medium": "✓ Contraseña media",
+    "strong": "✓✓ Contraseña fuerte"
+  },
+  "errors": {
+    "username_required": "El usuario es obligatorio",
+    "username_min": "El usuario debe tener al menos 3 caracteres",
+    "username_not_found": "Usuario no encontrado",
+    "password_required": "La contraseña es obligatoria",
+    "password_min": "La contraseña debe tener al menos 6 caracteres",
+    "password_incorrect": "Contraseña incorrecta",
+    "email_required": "El correo electrónico es obligatorio",
+    "email_invalid": "Ingresa un correo electrónico válido",
+    "confirm_password_required": "Por favor confirma tu contraseña",
+    "password_mismatch": "Las contraseñas no coinciden",
+    "user_not_found": "Usuario no encontrado con estas credenciales",
+    "username_exists": "El usuario o correo ya existe"
+  },
+  "toast": {
+    "login_success": "¡Bienvenido de nuevo, {username}!",
+    "register_success": "¡Bienvenido {username}! ¡Registro exitoso!",
+    "register_success_login": "¡Bienvenido {username}! Por favor inicia sesión.",
+    "password_changed": "¡Contraseña cambiada exitosamente! Por favor inicia sesión.",
+    "password_changed_for": "¡Contraseña cambiada para {username}! Por favor inicia sesión."
+  },
+  "common": {
+    "or": "o",
+    "back": "Volver"
+  }
+}

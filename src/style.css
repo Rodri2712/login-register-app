@@ -1,0 +1,561 @@
+/* =========================
+   RESET & BASE - Minimalista
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9eef5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL - Glassmorphism
+========================= */
+.container {
+    position: relative;
+    width: 1000px;
+    height: 620px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+/* =========================
+   FORM CONTAINERS
+========================= */
+.form-container {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.login {
+    right: 0;
+    z-index: 2;
+}
+
+.register {
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container.active .login {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container.active .register {
+    transform: translateX(-100%);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+}
+
+/* =========================
+   FORMULARIO - Diseño refinado y espaciado mejorado
+========================= */
+.form {
+    width: 76%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+    animation: fadeInUp 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #1a2a4f, #2d3a6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.form.recover-mode h1 {
+    background: linear-gradient(135deg, #1a2a4f, #4a6fa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   INPUTS - Estilo moderno con espaciado
+========================= */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 44px 15px 18px;
+    border-radius: 14px;
+    border: 1.5px solid #e8edf2;
+    background: #ffffff;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    cursor: text;
+    color: #1a2a4f;
+}
+
+.input-box input:focus {
+    border-color: #6c8edb;
+    box-shadow: 0 0 0 3px rgba(108, 142, 219, 0.08);
+}
+
+.input-box input.input-error {
+    border-color: #ff6b6b;
+    background: #fff8f8;
+}
+
+.input-box label {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 500;
+    color: #8e9eae;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    background: transparent;
+    padding: 0 4px;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -2px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #6c8edb;
+    background: white;
+    padding: 0 8px;
+    letter-spacing: 0.3px;
+}
+
+/* Iconos dentro de input-box que no son de toggle password */
+.input-box > i:not(.password-toggle-icon) {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #cbd5e1;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.input-box input:focus ~ i:not(.password-toggle-icon) {
+    color: #6c8edb;
+}
+
+.form-links {
+    text-align: right;
+    margin: 4px 0 8px 0;
+}
+
+.form-links a {
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #8e9eae;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 1.5px;
+    background: #6c8edb;
+    transition: width 0.25s ease;
+}
+
+.form-links a:hover::after {
+    width: 100%;
+}
+
+.form-links a:hover {
+    color: #6c8edb;
+}
+
+/* =========================
+   BOTÓN PRINCIPAL - Minimalista con espaciado
+========================= */
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #6c8edb, #5a7adb);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    position: relative;
+    overflow: hidden;
+    margin: 12px 0 8px 0;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(108, 142, 219, 0.25);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* =========================
+   OVERLAY - Efecto glass
+========================= */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.container.active .overlay-container {
+    transform: translateX(100%);
+}
+
+.overlay {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(135deg, #6c8edb, #5a7adb);
+    transform: translateX(-50%);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.container.active .overlay {
+    transform: translateX(0);
+}
+
+.overlay-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 0 45px;
+    color: white;
+}
+
+.overlay-panel h1 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.overlay-panel p {
+    font-size: 14px;
+    opacity: 0.88;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.ghost {
+    padding: 10px 32px;
+    border-radius: 40px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.ghost:hover {
+    background: white;
+    color: #5a7adb;
+    transform: translateY(-2px);
+    border-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   RECOVERY MODE
+========================= */
+.recovery {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.4s ease;
+}
+
+.container.recoveryActive::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 6;
+}
+
+.container.recoveryActive .recovery {
+    opacity: 1;
+    pointer-events: auto;
+    animation: recoveryFade 0.4s ease-out;
+}
+
+@keyframes recoveryFade {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.container.recoveryActive .login {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+/* =========================
+   INLINE MESSAGE - Elegante
+========================= */
+.inline-message {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 28px;
+    border-radius: 60px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    font-size: 13px;
+    font-weight: 600;
+    backdrop-filter: blur(20px);
+    letter-spacing: 0.3px;
+}
+
+.inline-message.success {
+    background: linear-gradient(135deg, #00d4a0, #00b894);
+    color: white;
+}
+
+.inline-message.error {
+    background: linear-gradient(135deg, #ff7675, #d63031);
+    color: white;
+}
+
+.inline-message i {
+    font-size: 16px;
+}
+
+/* =========================
+   LOADING SPINNER
+========================= */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #6c8edb; }
+
+::selection { background: #6c8edb; color: white; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 850px) {
+    .container { width: 95%; height: auto; min-height: 620px; }
+    .form { width: 85%; gap: 28px; }
+    .overlay-panel { padding: 0 25px; }
+    .overlay-panel h1 { font-size: 24px; }
+}
+
+@media (max-width: 550px) {
+    .container { width: 100%; border-radius: 0; }
+    .form { width: 88%; gap: 24px; }
+    .form h1 { font-size: 26px; }
+    .overlay-panel h1 { font-size: 20px; }
+    .ghost { padding: 8px 24px; font-size: 12px; }
+}
+
+/* =========================
+   CONFIGURACIÓN - VERSIÓN SIMPLIFICADA
+   Panel directamente en posición fija
+   Tamaño compacto y bien proporcionado
+========================= */
+.settings-panel {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    min-width: 200px;
+}
+
+.settings-section {
+    margin-bottom: 16px;
+}
+
+.settings-section:last-child {
+    margin-bottom: 0;
+}
+
+.settings-section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.settings-section-label i {
+    font-size: 11px;
+    color: #6c8edb;
+}
+
+.settings-options {
+    display: flex;
+    gap: 10px;
+}
+
+.settings-option-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 40px;
+    border: 1.5px solid #e8edf2;
+    background: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.settings-option-btn i {
+    font-size: 12px;
+}
+
+.settings-option-btn:hover {
+    border-color: #6c8edb;
+    background: rgba(108, 142, 219, 0.05);
+    transform: translateY(-1px);
+}
+
+.settings-option-btn.active {
+    background: linear-gradient(135deg, #6c8edb, #5a7adb);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 2px 8px rgba(108, 142, 219, 0.25);
+}
+
+/* =========================
+   TEMA OSCURO
+========================= */
+body.dark-theme .settings-panel {
+    background: rgba(26, 26, 46, 0.98);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-theme .settings-section-label {
+    color: #94a3b8;
+}
+
+body.dark-theme .settings-section-label i {
+    color: #8aabff;
+}
+
+body.dark-theme .settings-option-btn {
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+body.dark-theme .settings-option-btn:hover {
+    border-color: #8aabff;
+    background: rgba(90, 122, 219, 0.15);
+}
+
+body.dark-theme .settings-option-btn.active {
+    background: linear-gradient(135deg, #5a7adb, #4a6ac3);
+    color: white;
+}

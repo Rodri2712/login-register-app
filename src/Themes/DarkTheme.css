@@ -1,0 +1,78 @@
+/* =========================
+   TEMA OSCURO MODERNIZADO
+========================= */
+body.dark-theme {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-theme .container {
+    background: rgba(26, 26, 46, 0.96);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .form h1 {
+    background: linear-gradient(135deg, #c0d4ff, #8aabff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-theme .input-box input {
+    background: #2a2a3a;
+    border-color: #3a3a4a;
+    color: #e2e8f0;
+}
+
+body.dark-theme .input-box input:focus {
+    border-color: #8aabff;
+    box-shadow: 0 0 0 3px rgba(138, 171, 255, 0.1);
+}
+
+body.dark-theme .input-box label { color: #888; }
+body.dark-theme .input-box input:focus + label,
+body.dark-theme .input-box input:valid + label {
+    background: #1e1e2e;
+    color: #8aabff;
+}
+
+body.dark-theme .input-box i { color: #888; }
+body.dark-theme .input-box input:focus ~ i { color: #8aabff; }
+body.dark-theme .form-links a { color: #aaa; }
+body.dark-theme .form-links a:hover { color: #8aabff; }
+body.dark-theme .social-block span { color: #888; }
+body.dark-theme .socials a {
+    background: #2a2a3a;
+    border-color: #3a3a4a;
+    color: #ccc;
+}
+body.dark-theme .socials a:hover {
+    background: #6c8edb;
+    color: white;
+}
+body.dark-theme .btn {
+    background: linear-gradient(135deg, #5a7adb, #4a6ac3);
+}
+body.dark-theme .btn:hover {
+    box-shadow: 0 8px 20px rgba(90, 122, 219, 0.3);
+}
+body.dark-theme .ghost { border-color: rgba(255, 255, 255, 0.5); }
+body.dark-theme .ghost:hover {
+    background: white;
+    color: #4a6ac3;
+}
+body.dark-theme .overlay {
+    background: linear-gradient(135deg, #5a7adb, #4a6ac3);
+}
+body.dark-theme .container.recoveryActive::before { background: #1e1e2e; }
+body.dark-theme .inline-message {
+    background: #2a2a3a;
+    color: #e2e8f0;
+}
+body.dark-theme .inline-message.success {
+    background: linear-gradient(135deg, #00b894, #009d7a);
+    color: white;
+}
+body.dark-theme .inline-message.error {
+    background: linear-gradient(135deg, #d63031, #b91a1a);
+    color: white;
+}

@@ -1,0 +1,75 @@
+/* =========================
+   TEMA CLARO MODERNIZADO
+========================= */
+body.light-theme {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9eef5 100%);
+}
+
+body.light-theme .container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .form h1 {
+    background: linear-gradient(135deg, #1a2a4f, #2d3a6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-theme .input-box input {
+    background: #ffffff;
+    border-color: #e8edf2;
+    color: #1a2a4f;
+}
+
+body.light-theme .input-box input:focus {
+    border-color: #6c8edb;
+    box-shadow: 0 0 0 3px rgba(108, 142, 219, 0.08);
+}
+
+body.light-theme .input-box label { color: #8e9eae; }
+body.light-theme .input-box input:focus + label,
+body.light-theme .input-box input:valid + label {
+    background: white;
+    color: #6c8edb;
+}
+
+body.light-theme .input-box i { color: #cbd5e1; }
+body.light-theme .input-box input:focus ~ i { color: #6c8edb; }
+body.light-theme .form-links a { color: #8e9eae; }
+body.light-theme .form-links a:hover { color: #6c8edb; }
+body.light-theme .social-block span { color: #a0abb9; }
+body.light-theme .socials a {
+    background: white;
+    border-color: #e8edf2;
+    color: #8e9eae;
+}
+body.light-theme .socials a:hover {
+    background: #6c8edb;
+    color: white;
+}
+body.light-theme .btn {
+    background: linear-gradient(135deg, #6c8edb, #5a7adb);
+}
+body.light-theme .btn:hover {
+    box-shadow: 0 8px 20px rgba(108, 142, 219, 0.25);
+}
+body.light-theme .ghost { border-color: rgba(255, 255, 255, 0.6); }
+body.light-theme .ghost:hover {
+    background: white;
+    color: #5a7adb;
+}
+body.light-theme .overlay {
+    background: linear-gradient(135deg, #6c8edb, #5a7adb);
+}
+body.light-theme .container.recoveryActive::before { background: #fff; }
+body.light-theme .inline-message { background: white; color: #1a2a4f; }
+body.light-theme .inline-message.success {
+    background: linear-gradient(135deg, #00d4a0, #00b894);
+    color: white;
+}
+body.light-theme .inline-message.error {
+    background: linear-gradient(135deg, #ff7675, #d63031);
+    color: white;
+}

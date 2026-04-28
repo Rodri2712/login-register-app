@@ -1,0 +1,69 @@
+{
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "forgot_password": "Forgot password?",
+    "button": "Login",
+    "logging_in": "Logging in...",
+    "welcome_back": "Welcome Back!",
+    "welcome_back_message": "Already have an account?",
+    "login_button": "Login"
+  },
+  "register": {
+    "title": "Register",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "button": "Register",
+    "creating": "Creating account...",
+    "hello_welcome": "Hello, Welcome!",
+    "hello_welcome_message": "Don't have an account?",
+    "register_button": "Register"
+  },
+  "recovery": {
+    "title": "Recover Password",
+    "username": "Username",
+    "email": "Email",
+    "new_password": "New Password",
+    "confirm_password": "Confirm Password",
+    "button": "Change Password",
+    "changing": "Changing password...",
+    "back_to_login": "Back to login",
+    "need_help": "Need Help?",
+    "need_help_message": "Reset your password in seconds",
+    "back_button": "Back",
+    "password_reset": "Password Reset",
+    "password_reset_message": "Enter your new credentials"
+  },
+  "password_strength": {
+    "weak": "⚠️ Weak password",
+    "medium": "✓ Medium password",
+    "strong": "✓✓ Strong password"
+  },
+  "errors": {
+    "username_required": "Username is required",
+    "username_min": "Username must be at least 3 characters",
+    "username_not_found": "Username not found",
+    "password_required": "Password is required",
+    "password_min": "Password must be at least 6 characters",
+    "password_incorrect": "Incorrect password",
+    "email_required": "Email is required",
+    "email_invalid": "Enter a valid email",
+    "confirm_password_required": "Please confirm your password",
+    "password_mismatch": "Passwords do not match",
+    "user_not_found": "User not found with these credentials",
+    "username_exists": "Username or email already exists"
+  },
+  "toast": {
+    "login_success": "Welcome back, {username}!",
+    "register_success": "Welcome {username}! Registration successful!",
+    "register_success_login": "Welcome {username}! Please login.",
+    "password_changed": "Password changed successfully! Please login.",
+    "password_changed_for": "Password changed for {username}! Please login."
+  },
+  "common": {
+    "or": "or",
+    "back": "Back"
+  }
+}
